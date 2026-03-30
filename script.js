@@ -16,3 +16,16 @@ searchInput.addEventListener("keyup", function () {
     }
   });
 });
+function filterService(category) {
+  const services = document.querySelectorAll(".service");
+
+  services.forEach(service => {
+    if (category === "all") {
+      service.style.display = "block";
+    } else if (service.classList.contains(category)) {
+      service.style.display = "block";
+    } else {
+      service.style.display = "none";
+    }
+  });
+}
